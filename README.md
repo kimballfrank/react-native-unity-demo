@@ -14,8 +14,8 @@ npm install
 
 ```
 
-**2. Download correct version of Unity**
-[Unity version 2018.2.17f1](hunityhub://2018.2.17f1/88933597c842)
+**2. Download Unity version 2018.2.17f1**
+hunityhub://2018.2.17f1/88933597c842
 
 **3. Open unity project `unity/Cube/Assets/test.unity`**
 
