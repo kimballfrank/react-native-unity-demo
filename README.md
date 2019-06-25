@@ -2,29 +2,32 @@
 
 This is a demo project for [react-native-unity](https://github.com/f111fei/react-native-unity-view)
 
-## Unity Version
-
-Use the master branch (Unity >= 2018.2)
-
-Use [unity-2017](https://github.com/f111fei/react-native-unity-demo/tree/unity-2018.1) branch (Unity = 2018.1)
-Use [unity-2017](https://github.com/f111fei/react-native-unity-demo/tree/unity-2017) branch (Unity < 2018)
-
-
 ## How to Build
 
-1. Open `unity/Cube/Assets/test.unity`
-
-2. Click `Build` => `Export Android` or `Export IOS`
-
-
+1. Clone repo & install npm modules
 ```
+git clone https://github.com/kimballfrank/react-native-unity-demo.git
+
 cd react-native-unity-demo
 
 npm install
 
-npm run watch
+```
 
-npm run android or npm run ios
+2. Edit node_models/@types/react-native/index.d.ts - comment out line 8537: export type Geolocation = GeolocationStatic;
+
+3. Open unity project `unity/Cube/Assets/test.unity` (make sure to use Unity version 2018.2.17f1)
+
+4. Click `Build` => `Export IOS` or `Export Android`
+
+5. Compile Typescript
+```
+npm run watch
+```
+
+6. React-native cli run-ios
+```
+npm run ios
 ```
 
 ## Preview
