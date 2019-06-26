@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -13,7 +13,10 @@ public class Build : MonoBehaviour
     static readonly string ProjectPath = Path.GetFullPath(Path.Combine(Application.dataPath, ".."));
 
     static readonly string apkPath = Path.Combine(ProjectPath, "Builds/" + Application.productName + ".apk");
-
+    
+    //////////////////////////////////////////////////////
+    //Export for Android
+    //////////////////////////////////////////////////////
     [MenuItem("Build/Export Android %&a", false, 1)]
     public static void DoBuildAndroid()
     {
@@ -58,7 +61,10 @@ public class Build : MonoBehaviour
         manifest_text = regex.Replace(manifest_text, "");
         File.WriteAllText(manifest_file, manifest_text);
     }
-
+    
+    //////////////////////////////////////////////////////
+    //Export for iOS
+    //////////////////////////////////////////////////////
     [MenuItem("Build/Export IOS %&i", false, 2)]
     public static void DoBuildIOS()
     {
